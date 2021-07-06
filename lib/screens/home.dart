@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
+    final double width = MediaQuery.of(context).size.width;
+    final double height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: const Color(0xff0A3D5C),
       appBar: AppBar(
         backgroundColor: const Color(0xff0A3D5C),
         elevation: 0,
-        actions: [
+        actions: <Widget>[
           Image.asset("assets/images/Repeat Grid 1.png"),
           Image.asset("assets/images/notification icon.png"),
         ],
@@ -24,7 +24,7 @@ class Home extends StatelessWidget {
         decoration: BoxDecoration(
           color: const Color(0xffeeeeee),
           border: Border.all(),
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(20),
             topRight: Radius.circular(20),
           ),
@@ -32,8 +32,8 @@ class Home extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
-            children: [
-              Align(
+            children: <Widget>[
+              const Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
                   padding: EdgeInsets.only(left: 20),
@@ -43,7 +43,7 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
-              Align(
+              const Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
                   padding: EdgeInsets.only(left: 20),
@@ -53,23 +53,22 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: <Widget>[
                     Center(
                       child: Container(
                         width: width - 100,
                         height: 50,
-                        child: TextField(
+                        child: const TextField(
                           maxLines: 1,
                           decoration: InputDecoration(
-                            border: new OutlineInputBorder(
-                                borderSide:
-                                    new BorderSide(color: Colors.white)),
+                            border: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.white)),
                             hintText: 'Search...',
                           ),
                         ),
@@ -78,8 +77,8 @@ class Home extends StatelessWidget {
                     Container(
                       height: 50,
                       width: 50,
-                      decoration: BoxDecoration(
-                        color: const Color(0xff127062),
+                      decoration: const BoxDecoration(
+                        color: Color(0xff127062),
                         borderRadius: BorderRadius.all(Radius.circular(5)),
                       ),
                       child: Center(
@@ -89,12 +88,12 @@ class Home extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const <Widget>[
                   Text(
                     "Category",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -107,7 +106,7 @@ class Home extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
+                  children: const <Widget>[
                     CategoryWidget(
                         "assets/images/dental icon.png", "Dental", 26),
                     CategoryWidget("assets/images/heart icon.png", "Heart", 18),
@@ -116,12 +115,12 @@ class Home extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const <Widget>[
                   Text(
                     "Top Rate",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
@@ -132,14 +131,14 @@ class Home extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Container(
                 height: 200,
                 child: SingleChildScrollView(
                   child: Column(
-                    children: [
+                    children: const <Widget>[
                       ListTileWidget("assets/images/doctor img.png",
                           "Dr. Fred Mask", "Heart surgen", 4.9, 5.3),
                       ListTileWidget("assets/images/img.png", "Dr. Stella Kane",

@@ -5,18 +5,18 @@ class EveningAppointment extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
+      children: <Widget>[
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(
                 Radius.circular(5),
               ),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
+              children: <Widget>[
                 getTime("05:30 AM", false),
                 getTime("06:00 AM", false),
                 getTime("06:30 AM", false),
@@ -25,14 +25,14 @@ class EveningAppointment extends StatelessWidget {
           ),
         ),
         Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(
               Radius.circular(5),
             ),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
+            children: <Widget>[
               getTime("07:00 AM", false),
               getTime("07:30 AM", false),
               getTime("08:00 AM", false),
@@ -48,26 +48,25 @@ class EveningAppointment extends StatelessWidget {
       width: 95,
       height: 30,
       decoration: BoxDecoration(
-        color: (active!) ? const Color(0xff127062) : const Color(0xffffffff),
-        borderRadius: BorderRadius.all(
+        color: active! ? const Color(0xff127062) : const Color(0xffffffff),
+        borderRadius: const BorderRadius.all(
           Radius.circular(5),
         ),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
+        children: <Widget>[
           Icon(
             Icons.access_time,
-            color: (active ? Color(0xffffffff) : null),
+            color: active ? const Color(0xffffffff) : null,
           ),
           Text(
             time!,
             style: TextStyle(
                 fontSize: 13,
                 fontWeight: FontWeight.bold,
-                color: (active)
-                    ? const Color(0xffffffff)
-                    : const Color(0xff000000)),
+                color:
+                    active ? const Color(0xffffffff) : const Color(0xff000000)),
           ),
         ],
       ),

@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: Home(),
-      routes: {
-        DoctorAppointment.routeName: (ctx) => DoctorAppointment(),
+      routes: <String, Widget Function(BuildContext)>{
+        DoctorAppointment.routeName: (_) => DoctorAppointment(),
       },
     );
   }

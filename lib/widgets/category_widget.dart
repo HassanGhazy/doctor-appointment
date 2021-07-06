@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CategoryWidget extends StatelessWidget {
-  String? image;
-  String? name;
-  int? number;
-  CategoryWidget(this.image, this.name, this.number);
+  const CategoryWidget(this.image, this.name, this.number);
+  final String? image;
+  final String? name;
+  final int? number;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -12,41 +12,41 @@ class CategoryWidget extends StatelessWidget {
       child: Container(
         width: 90,
         height: 110,
-        decoration: BoxDecoration(
-          color: const Color(0xff127062),
+        decoration: const BoxDecoration(
+          color: Color(0xff127062),
           borderRadius: BorderRadius.all(Radius.circular(8)),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SizedBox(
+          children: <Widget>[
+            const SizedBox(
               height: 5,
             ),
             Image.asset(image!),
             Text(
               name!,
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
-                  color: const Color(0xffffffff)),
+                  color: Color(0xffffffff)),
             ),
             Container(
               width: 60,
               height: 20,
-              decoration: BoxDecoration(
-                color: const Color(0xff1F7366),
+              decoration: const BoxDecoration(
+                color: Color(0xff1F7366),
                 borderRadius: BorderRadius.all(Radius.circular(8)),
               ),
               child: Center(
                 child: Text(
                   "$number Doctors",
                   style:
-                      TextStyle(fontSize: 12, color: const Color(0xffffffff)),
+                      const TextStyle(fontSize: 12, color: Color(0xffffffff)),
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             )
           ],
